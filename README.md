@@ -4,3 +4,10 @@
 - Fournier Lucas
 - Ciron Léo-Paul
 - Macrelle Tristan
+
+# Etapes
+
+- init (check)
+- chargement des données (check)
+- accueil vers /pokemons (check)
+- chargement des autres générations (en cours)
