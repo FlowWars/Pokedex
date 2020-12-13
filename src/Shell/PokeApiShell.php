@@ -30,10 +30,10 @@ class PokeApiShell extends Shell
      */
     public function main()
     {
-        
-        $this->verbose('chargement pour les generations restantes !');
-        $this->_loadGeneration(252, 898);
-        
+        $this->verbose('Loading the 1st generation !');
+        $this->_loadGeneration(1, 151);
+        $this->verbose('Loading the 2nd generation !');
+        $this->_loadGeneration(152, 251);
     }
 
     /**
