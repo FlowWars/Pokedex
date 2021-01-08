@@ -85,12 +85,11 @@ class PokemonsTable extends Table
             ->integer('weight')
             ->requirePresence('weight', 'create')
             ->notEmptyString('weight');
-            
-        $validator
+$validator
             ->scalar('default_front_sprite_url')
             ->maxLength('default_front_sprite_url', 255)
             ->requirePresence('default_front_sprite_url', 'create')
-            ->allowemptystring('default_front_sprite_url');
+            ->allowEmptyString('default_front_sprite_url');
 
 
         return $validator;
