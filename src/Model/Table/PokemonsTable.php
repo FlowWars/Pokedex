@@ -91,7 +91,7 @@ class PokemonsTable extends Table
             ->maxLength('default_front_sprite_url', 255)
             ->requirePresence('default_front_sprite_url', 'create')
             ->AllowEmptyString('default_front_sprite_url');
-        
+
         return $validator;
     }
 
