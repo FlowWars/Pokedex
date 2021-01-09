@@ -1,0 +1,252 @@
+div.snorlax {
+  height: 130px;
+}
+
+div.snorlax * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div.snorlax .container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.snorlax body {
+  height: 100vh;
+  background-color: #b4c5aa;
+  overflow: hidden;
+}
+
+div.snorlax #snore-bubble {
+  -webkit-animation-name: bubble-stretch;
+          animation-name: bubble-stretch;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  transform-box: fill-box;
+  -webkit-animation-delay: 1.2;
+          animation-delay: 1.2;
+}
+
+@-webkit-keyframes bubble-stretch {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes bubble-stretch {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+div.snorlax #mouth {
+  -webkit-animation-name: mouth-stretch;
+          animation-name: mouth-stretch;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  transform-box: fill-box;
+  -webkit-animation-delay: 1.2;
+          animation-delay: 1.2;
+}
+
+@-webkit-keyframes mouth-stretch {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@keyframes mouth-stretch {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+div.snorlax #snore-bubble {
+  -webkit-animation-name: stretch;
+          animation-name: stretch;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes stretch {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes stretch {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+div.snorlax #body {
+  -webkit-animation-name: body-stretch;
+          animation-name: body-stretch;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  transform-box: fill-box;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-delay: 2;
+          animation-delay: 2;
+}
+
+@-webkit-keyframes body-stretch {
+  0% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes body-stretch {
+  0% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+div.snorlax #right-hand {
+  -webkit-animation-name: move-up;
+          animation-name: move-up;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-delay: 2;
+          animation-delay: 2;
+}
+
+@-webkit-keyframes move-up {
+  0% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes move-up {
+  0% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+div.snorlax #left-foot,
+div.snorlax #right-foot {
+  -webkit-animation-name: wiggle;
+          animation-name: wiggle;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-delay: 2.5;
+          animation-delay: 2.5;
+}
+
+@-webkit-keyframes wiggle {
+  from {
+    -webkit-transform: rotate(-1.5deg) translateY(-5px);
+            transform: rotate(-1.5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform: rotate(0deg) translateY(0px);
+            transform: rotate(0deg) translateY(0px);
+  }
+}
+
+@keyframes wiggle {
+  from {
+    -webkit-transform: rotate(-1.5deg) translateY(-5px);
+            transform: rotate(-1.5deg) translateY(-5px);
+  }
+  to {
+    -webkit-transform: rotate(0deg) translateY(0px);
+            transform: rotate(0deg) translateY(0px);
+  }
+}
+/*# sourceMappingURL=snorlax.css.map */

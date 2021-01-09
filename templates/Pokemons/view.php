@@ -21,6 +21,15 @@
                     <td><?= h($pokemon->name) ?></td>
                 </tr>
                 <tr>
+                    <div class="card__image-container poke-sprite-<?= $pokemon->pokedex_number ?>" id="main-poke-sprites">
+                      
+                        <?= $this->Html->image($pokemon->front_shiny_sprite); ?>
+                        <?= $this->Html->image($pokemon->back_sprite); ?>
+                        <?= $this->Html->image($pokemon->back_shiny_sprite); ?>
+
+                    </div>
+                </tr>
+                <tr>
                     <th><?= __('Default Front Sprite Url') ?></th>
                     <td><?= h($pokemon->default_front_sprite_url) ?></td>
                 </tr>
@@ -104,6 +113,7 @@
                                 <?= $this->Form->postLink(__('Delete'), ['controller' => 'PokemonTypes', 'action' => 'delete', $pokemonTypes->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pokemonTypes->id)]) ?>
                             </td>
                         </tr>
+                        
                         <?php endforeach; ?>
                     </table>
                 </div>
