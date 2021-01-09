@@ -11,6 +11,6 @@
 - chargement des données (check)
 - accueil vers /pokemons (check)
 - chargement des autres générations (check)
-- les données manquantes (à faire)
+- les données manquantes (check)
 - la maquette (à faire)
 - tableau de bord et statistiques (à faire)
