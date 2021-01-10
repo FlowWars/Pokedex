@@ -25,8 +25,8 @@
                  */
                 ?>
                 <tr>
-                    <th><?= $pokemon->second_type ?></th>
                     <th><?= $pokemon->first_type ?></th>
+                    <th><?= $pokemon->second_type ?></th>
                 </tr>
                 <?
                 /*
