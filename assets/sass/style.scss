@@ -234,6 +234,114 @@ $theme-colors: (
             background: #ff8a95;
         }
     }
+    
+    &--poison,
+    .poison {
+        background: linear-gradient(
+            90deg,
+            rgb(76, 0, 255) 34%,
+            rgb(223, 153, 255) 83%
+        );
+        .card__type {
+            background-color: rgb(76, 0, 255);
+        }
+    }
+
+    &--bug,
+    .bug {
+        background: linear-gradient(
+            90deg,
+            rgb(162, 204, 48) 34%,
+            rgb(186, 223, 156) 83%
+        );
+        .card__type {
+            background-color: rgb(162, 204, 48);
+        }
+    }
+
+    &--flying,
+    .flying {
+        background: linear-gradient(
+            90deg,
+            #9CADF7 34%,
+            rgb(182, 223, 235) 83%
+        );
+        .card__type {
+            background-color: #9CADF7;
+        }
+    }
+
+    &--ground,
+    .ground {
+        background: linear-gradient(
+            90deg,
+            #D6B55A 34%,
+            rgb(236, 231, 187) 83%
+        );
+        .card__type {
+            background-color: #D6B55A;
+        }
+    }
+
+    &--fighting,
+    .fighting {
+        background: linear-gradient(
+            90deg,
+            #A55239 34%,
+            rgb(221, 180, 156) 83%
+        );
+        .card__type {
+            background-color: #A55239;
+        }
+    }
+
+    &--rock,
+    .rock {
+        background: linear-gradient(
+            90deg,
+            #a18b48 34%,
+            rgb(230, 212, 154) 83%
+        );
+        .card__type {
+            background-color: #a18b48;
+        }
+    }
+
+    &--ghost,
+    .ghost {
+        background: linear-gradient(
+            90deg,
+            #6363B5 34%,
+            #8383ac 83%
+        );
+        .card__type {
+            background-color: #6363B5;
+        }
+    }
+
+    &--dragon,
+    .dragon {
+        background: linear-gradient(
+            90deg,
+            #8858F6 34%,
+            #c0aaf3 83%
+        );
+        .card__type {
+            background-color: #8858F6;
+        }
+    }
+
+    &--steel,
+    .steel {
+        background: linear-gradient(
+            90deg,
+            #ADADC6 34%,
+            #ececec 83%
+        );
+        .card__type {
+            background-color: #ADADC6;
+        }
+    }
 
     position: relative;
     transition: 0.4s;
@@ -294,6 +402,3 @@ h5 {
     width: 100%;
     margin-left: 0;
 }
-
-
-
