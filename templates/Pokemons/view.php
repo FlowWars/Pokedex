@@ -18,7 +18,16 @@
             <table>
                 <tr>
                     <td><?= $this->Html->image($pokemon->main_sprite) ?></td>
-                </tr> 
+                </tr>
+                <?
+                /*
+                 * Pokemons' types taken from in the object "$pokemon"
+                 */
+                ?>
+                <tr>
+                    <th><?= $pokemon->second_type ?></th>
+                    <th><?= $pokemon->first_type ?></th>
+                </tr>
                 <?
                 /*
                  * Array $name which contain the differents names of the pokemons' stats.
