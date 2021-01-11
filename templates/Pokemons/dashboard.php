@@ -10,7 +10,7 @@ use Cake\ORM\TableRegistry;
 <h1><br>DASHBOARD</h1>
     <h3><br>Average weight</h3>
     <div class="pokemons view content">
-    <?php $pokemonTable = TableRegistry::get('Pokemons')->find();
+    <?php $pokemonTable = TableRegistry::get('Pokemons')->find()->where(['pokedex_number >' => 386, 'pokedex_number <' => 494]);
             $weight = $pokemonTable->extract('weight')->avg();?>
         <table>
             <tr>
