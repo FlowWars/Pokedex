@@ -32,7 +32,8 @@ use Cake\ORM\TableRegistry;
     </div>
     <h3><br>TOP 10 fastest pokemon</h3>
     <div class="pokemons view content">
-    <?php $statsTable = TableRegistry::get('pokemon_stats')->find()->where(['stat_id' => 6])->order(['value' => 'DESC']);
+    <?php $pokemonTable = TableRegistry::get('pokemons')->find();
+                $statsTable = TableRegistry::get('pokemon_stats')->find()->where(['stat_id' => 6])->order(['value' => 'DESC']);
                 $speed = $statsTable->extract('pokemon_id')->toArray();
                 $name = $pokemonTable->extract('name')->toArray() ?>
         <table>
