@@ -21,8 +21,22 @@ use Cake\ORM\TableRegistry;
     </div>
     <h3><br>Number of fairy type pokemons</h3>
     <div class="pokemons view content">
-    <?php $typeTable = TableRegistry::get('pokemon_types')->find()->where(['type_id' => 10]);
-            $fairy = $typeTable->count() ?>
+    <?php $typeTable = TableRegistry::get('pokemons')->find();
+            $allFairy = $typeTable
+            ->join([
+                'types' => [
+                'table' => 'pokemon_types',
+                'type' => 'INNER',
+                'conditions' => 'types.pokemon_id = pokemons.pokedex_number'],])
+            ->where(['type_id' => 10]);
+            $fairy = $allFairy->where(function($exp, $allFairy){
+                return $exp->addCase(
+                [ 
+                    $allFairy->newExpr()->between('Pokemons.pokedex_number',1,151),
+                    $allFairy->newExpr()->between('Pokemons.pokedex_number',252,386),
+                    $allFairy->newExpr()->between('Pokemons.pokedex_number',722,809)
+                ]
+                ); })->count(); ?>
         <table>
             <tr>
                 <th>1st, 3rd and 7th generation</th>
