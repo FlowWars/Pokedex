@@ -90,9 +90,6 @@ class PokemonsTable extends Table
             ->scalar('default_front_sprite_url')
             ->maxLength('default_front_sprite_url', 255)
             ->requirePresence('default_front_sprite_url', 'create')
-<<<<<<< Updated upstream
-            ->notEmptyString('default_front_sprite_url');
-=======
             ->allowEmptyString('default_front_sprite_url');
 
         $validator
@@ -112,7 +109,6 @@ class PokemonsTable extends Table
             ->maxLength('default_back_shiny_sprite_url', 255)
             ->requirePresence('default_back_shiny_sprite_url', 'create')
             ->allowEmptyString('default_back_shiny_sprite_url');
->>>>>>> Stashed changes
 
         return $validator;
     }
