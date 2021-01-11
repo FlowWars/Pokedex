@@ -60,8 +60,6 @@ class Pokemon extends Entity
     {
         return $this ->default_front_shiny_sprite_url ? $this->default_front_shiny_sprite_url: 'unknow.png';
     }
-
-
     /**
      * Return the first type for a pokemon
      *

@@ -90,25 +90,23 @@ class PokemonsTable extends Table
             ->scalar('default_front_sprite_url')
             ->maxLength('default_front_sprite_url', 255)
             ->requirePresence('default_front_sprite_url', 'create')
-            ->allowEmptyString('default_front_sprite_url');
+            ->allowEmptyString('default_front_sprite_url');//permet d'autoriser la pressence de string vide         
+        /*
+            Validatiion de la récuperation des images manquantent 
+        */
+        $validator
+            ->scalar('default_front_shiny_sprite_url')
+            ->maxLength('default_front_shiny_sprite_url', 255)
+            ->allowEmptyString('default_front_shiny_sprite_url');//permet d'autoriser la pressence de string vide 
+        $validator
+            ->scalar('default_back_shiny_sprite_url')
+            ->maxLength('default_back_shiny_sprite_url', 255)
+            ->allowEmptyString('default_back_shiny_sprite_url');//permet d'autoriser la pressence de string vide 
 
         $validator
             ->scalar('default_back_sprite_url')
             ->maxLength('default_back_sprite_url', 255)
-            ->requirePresence('default_back_sprite_url', 'create')
-            ->allowEmptyString('default_back_sprite_url');
-
-        $validator
-            ->scalar('default_front_shiny_sprite_url')
-            ->maxLength('default_front_shiny_sprite_url', 255)
-            ->requirePresence('default_front_shiny_sprite_url', 'create')
-            ->allowEmptyString('default_front_shiny_sprite_url');
-
-        $validator
-            ->scalar('default_back_shiny_sprite_url')
-            ->maxLength('default_back_shiny_sprite_url', 255)
-            ->requirePresence('default_back_shiny_sprite_url', 'create')
-            ->allowEmptyString('default_back_shiny_sprite_url');
+            ->allowEmptyString('default_back_sprite_url');//permet d'autoriser la pressence de string vide 
 
         return $validator;
     }
@@ -129,8 +127,10 @@ class PokemonsTable extends Table
             'name' => $pokeApiData['name'],
             'default_front_sprite_url' => $pokeApiData['sprites']['front_default'],
             'default_back_sprite_url' => $pokeApiData['sprites']['back_default'],
+
             'default_front_shiny_sprite_url' => $pokeApiData['sprites']['front_shiny'],
             'default_back_shiny_sprite_url' => $pokeApiData['sprites']['back_shiny'],
+
             'height' => $pokeApiData['height'],
             'weight' => $pokeApiData['weight'],
             'pokemon_stats' => $pokemonStats,
