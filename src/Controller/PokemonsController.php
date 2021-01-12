@@ -63,9 +63,4 @@ class PokemonsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-
-    public function dashboard()
-    {
-        echo'test';
-    }
 }
