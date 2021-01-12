@@ -10,6 +10,14 @@ use Cake\ORM\TableRegistry;
 <h1><br>DASHBOARD</h1>
     <h3><br>Average weight</h3>
     <div class="pokemons view content">
+    <? 
+    /*
+     * Using the ORM to take all the values of the "pokemons" table where "pokedex_number" is between 386 and 494
+     * Extraction of the column 'weight', calculation of the average of all those values
+     * 
+     * Thanks to this : we have the average weight of pokemons of the 4th generation
+     */
+    ?>
     <?php $pokemonTable = TableRegistry::get('Pokemons')->find()->where(['pokedex_number >' => 386, 'pokedex_number <' => 494]);
             $weight = $pokemonTable->extract('weight')->avg();?>
         <table>
@@ -21,6 +29,20 @@ use Cake\ORM\TableRegistry;
     </div>
     <h3><br>Number of fairy type pokemons</h3>
     <div class="pokemons view content">
+    <?
+    /*
+     * Using the ORM to take all the values from "pokemons"
+     * 
+     * Use of the join to join "pokemons" and "pokemon_types", so as to have 
+     * the columns "pokedex_number" AND "pokemon_id"
+     * 
+     * Creation of a function which returns the lines where "pokedex_number" 
+     * is included between the intervals linked to generations 1, 3 and 7
+     * 
+     * We count the number of lines returned to have the number of fairy type pokemons 
+     * in these 3 generations
+     */ 
+    ?>
     <?php $typeTable = TableRegistry::get('pokemons')->find();
             $allFairy = $typeTable
             ->join([
