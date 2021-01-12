@@ -57,6 +57,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li class="nav-item active">
                     <?= $this->Html->link(__('Pokemons'), ['controller' => 'Pokemons', 'action' => 'index'], ['class' => "nav-link"]) ?>
                 </li>
+                <li class="nav-item active">
+                <?= $this->html->link(__('Dashboard'), ['action'=>'dashboard'], ['class' => "nav-link"]); ?>
+                </li>
             </ul>
         </div>
     </nav>
