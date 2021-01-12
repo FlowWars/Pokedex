@@ -6,7 +6,7 @@
 ?>
 <div class="pokemons index content">
     <h3><?= __('Pokemons') ?></h3>
-    <?= $this->html->link(['action'=>'dashboard'],['escape' => false, 'class' => 'dashboard', 'title' => __('dashboard')]); ?>
+    <?= $this->html->link(__('Dashboard'), ['action'=>'dashboard'], ['class' => 'nav-item', 'title' => __('dashboard')]); ?>
 
     <div class="row">
         <?php foreach ($pokemons as $pokemon) : ?>
