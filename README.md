@@ -13,4 +13,4 @@
 - chargement des autres générations (check)
 - les données manquantes (check)
 - la maquette (check)
-- tableau de bord et statistiques (à faire)
+- tableau de bord et statistiques (check)
