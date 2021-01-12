@@ -46,6 +46,18 @@ use Cake\ORM\TableRegistry;
     </div>
     <h3><br>TOP 10 fastest pokemon</h3>
     <div class="pokemons view content">
+    <?
+    /*
+     * Using the ORM to take all values from "pokemons" and "pokemons_stats" where "stat_id" = 6, 
+     * sorted in descending order 
+     * 
+     * Extraction of the column "pokemon_id" and convertion into Array() 
+     * Same for column "name"
+     * 
+     * Using a loop for () to display the name of the pokemon that has the location of the ID-1 
+     * contained in the "speed" array at the "$ i" location
+     */
+    ?>
     <?php $pokemonTable = TableRegistry::get('pokemons')->find();
                 $statsTable = TableRegistry::get('pokemon_stats')->find()->where(['stat_id' => 6])->order(['value' => 'DESC']);
                 $speed = $statsTable->extract('pokemon_id')->toArray();
